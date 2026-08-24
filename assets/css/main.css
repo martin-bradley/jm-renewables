@@ -3452,7 +3452,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/banner.png");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -4109,3 +4109,494 @@ input, select, textarea {
 					}
 
 	}
+/* J & M Renewables customisation
+   ------------------------------------------------------------ */
+
+:root {
+	--jm-blue: #096bc2;
+	--jm-blue-light: #5ca4df;
+	--jm-blue-dark: #073f79;
+	--jm-navy: #172433;
+}
+
+/* Brand accents */
+input[type="submit"]:hover, input[type="submit"]:active,
+input[type="reset"]:hover, input[type="reset"]:active,
+input[type="button"]:hover, input[type="button"]:active,
+.button:hover, .button:active {
+	box-shadow: inset 0 0 0 1px var(--jm-blue-light);
+	color: var(--jm-blue-light) !important;
+}
+
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+.button.primary {
+	background-color: var(--jm-blue);
+}
+
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+.button.primary:hover {
+	background-color: #147bd2;
+}
+
+#header nav ul li.active > a,
+#header nav ul li.active > span {
+	color: var(--jm-blue-light);
+}
+
+/* Header */
+#header {
+	background: rgba(16, 35, 54, 0.96);
+}
+
+body.landing #header {
+	background: linear-gradient(to bottom, rgba(5, 36, 73, 0.58), rgba(5, 36, 73, 0));
+	padding-bottom: 1.25em;
+}
+
+#logo a {
+	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+
+/* Hero: native HTML/CSS branding for sharp rendering at every resolution. */
+#banner {
+	background-color: var(--jm-blue);
+	background-image:
+		linear-gradient(135deg, #6bb1e8 0%, #559ed8 44%, #3f88c4 72%, #2f78b5 100%);
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+}
+
+/* Sweeping dark-blue curve from the original J & M branding. */
+#banner:after {
+	background:
+		radial-gradient(ellipse at 0% 0%,
+			#0870ca 0%,
+			#0061bd 44%,
+			#004ea4 70%,
+			#003e8a 100%);
+	border-radius: 50%;
+	content: '';
+	display: block;
+	height: 145vh;
+	left: auto;
+	opacity: 1;
+	position: absolute;
+	right: -31vw;
+	top: 31vh;
+	transform: rotate(-17deg);
+	width: 92vw;
+	z-index: 0;
+}
+
+#banner .content.hero-copy {
+	display: block;
+	left: 50%;
+	margin: 0;
+	max-width: 72em;
+	padding: 0 2em;
+	position: absolute;
+	text-align: center;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	z-index: 2;
+}
+
+.hero-brand {
+	color: #ffffff;
+	margin: 0 auto 1.25em;
+	text-align: center;
+	text-shadow: 0 2px 14px rgba(0, 38, 85, 0.12);
+}
+
+.hero-brand h1 {
+	color: #ffffff;
+	font-size: clamp(4.4rem, 8vw, 8.2rem);
+	font-weight: 550;
+	letter-spacing: 0.035em;
+	line-height: 0.9;
+	margin: 0 0 0.32em 0;
+}
+
+.hero-company {
+	color: #ffffff;
+	font-size: clamp(2.5rem, 5.7vw, 5.8rem);
+	font-weight: 100;
+	letter-spacing: 0.045em;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.hero-tagline {
+	font-size: 1.45em;
+	font-weight: 300;
+	letter-spacing: 0.04em;
+	margin: 0 0 1.15em 0;
+	text-shadow: 0 2px 12px rgba(0, 44, 96, 0.28);
+}
+
+#banner .actions {
+	margin-bottom: 0;
+}
+
+#banner .goto-next {
+	z-index: 2;
+}
+
+/* Section accent line and icons */
+.spotlight .content {
+	border-color: var(--jm-blue);
+}
+
+.icon.alt:before {
+	color: var(--jm-blue-light);
+}
+
+.wrapper.style2 {
+	background: linear-gradient(135deg, var(--jm-blue-dark), var(--jm-blue));
+}
+
+.wrapper.style2 input[type="submit"].primary,
+.wrapper.style2 input[type="reset"].primary,
+.wrapper.style2 input[type="button"].primary,
+.wrapper.style2 .button.primary {
+	color: var(--jm-blue-dark) !important;
+}
+
+.service-list {
+	margin: 0 0 2em 0;
+	padding-left: 1.2em;
+}
+
+.service-list li {
+	margin: 0.45em 0;
+}
+
+.testimonial-card {
+	background: rgba(255, 255, 255, 0.055);
+	border-radius: 8px;
+	margin: 2em auto 0;
+	max-width: 52em;
+	padding: 2em 2.5em 1.25em;
+}
+
+.testimonial-card blockquote {
+	font-size: 1.15em;
+	margin-bottom: 1em;
+}
+
+.testimonial-card p {
+	margin-bottom: 0;
+}
+
+.contact-container {
+	max-width: 60em;
+}
+
+.enquiry-form {
+	margin: 0 auto;
+	max-width: 52em;
+}
+
+.contact-direct {
+	margin-top: 2em;
+	text-align: center;
+}
+
+#footer {
+	background: #101c29;
+}
+
+@media screen and (max-width: 980px) {
+	#banner .content.hero-copy {
+		top: 54%;
+	}
+
+	.hero-brand h1 {
+		font-size: clamp(4rem, 11vw, 6rem);
+	}
+
+	.hero-company {
+		font-size: clamp(2.25rem, 7vw, 3.8rem);
+	}
+
+	.hero-tagline {
+		font-size: 1.2em;
+	}
+
+	#banner:after {
+		height: 130vh;
+		right: -42vw;
+		top: 35vh;
+		width: 112vw;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#banner {
+		background-image:
+			linear-gradient(155deg, #68afe6 0%, #4d96d1 50%, #327dbb 100%);
+	}
+
+	#banner:after {
+		height: 92vh;
+		right: -70vw;
+		top: 48vh;
+		transform: rotate(-18deg);
+		width: 155vw;
+	}
+
+	#banner .content.hero-copy {
+		max-width: none;
+		padding: 0 1.35em;
+		top: 49%;
+	}
+
+	.hero-brand {
+		margin-bottom: 1.5em;
+	}
+
+	.hero-brand h1 {
+		font-size: clamp(3.8rem, 18vw, 5.2rem);
+		line-height: 0.95;
+		margin-bottom: 0.38em;
+	}
+
+	.hero-company {
+		font-size: clamp(1.65rem, 8.6vw, 2.45rem);
+		letter-spacing: 0.025em;
+		white-space: normal;
+	}
+
+	.hero-tagline {
+		font-size: 1.05em;
+		line-height: 1.45;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 19em;
+	}
+
+	#banner .actions li {
+		display: block;
+		margin: 0.75em 0 0 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	#banner .actions .button {
+		width: 100%;
+	}
+}
+
+/* J & M palette refinement
+   ------------------------------------------------------------ */
+:root {
+	--jm-ink: #17324d;
+	--jm-text: #4f6376;
+	--jm-pale: #eef5fa;
+	--jm-line: #c7d9e6;
+	--jm-deep: #064f95;
+	--jm-deeper: #05396c;
+}
+
+a,
+a:hover {
+	color: var(--jm-blue);
+}
+
+.spotlight.style1 .content,
+.spotlight.style2 .content,
+.spotlight.style3 .content {
+	border-color: var(--jm-blue);
+}
+
+#about:before,
+#services:before,
+#projects:before {
+	background:
+		linear-gradient(rgba(34, 82, 122, 0.22), rgba(34, 82, 122, 0.22)),
+		url("images/overlay.png");
+}
+
+#about .content {
+	background: rgba(246, 250, 253, 0.97);
+	color: var(--jm-text);
+}
+
+#about .content h1,
+#about .content h2,
+#about .content h3,
+#about .content h4,
+#about .content h5,
+#about .content h6,
+#about .content strong,
+#about .content b {
+	color: var(--jm-ink);
+}
+
+#about .content header p {
+	color: #597086;
+}
+
+#services .content {
+	background: rgba(5, 63, 121, 0.96);
+	color: rgba(255, 255, 255, 0.86);
+	border-color: #5ca4df;
+}
+
+#services .content h1,
+#services .content h2,
+#services .content h3,
+#services .content h4,
+#services .content h5,
+#services .content h6,
+#services .content strong,
+#services .content b {
+	color: #ffffff;
+}
+
+#services .button {
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+	color: #ffffff !important;
+}
+
+#projects .content {
+	background: rgba(231, 241, 248, 0.97);
+	color: var(--jm-text);
+	border-color: var(--jm-blue);
+}
+
+#projects .content h1,
+#projects .content h2,
+#projects .content h3,
+#projects .content h4,
+#projects .content h5,
+#projects .content h6,
+#projects .content strong,
+#projects .content b {
+	color: var(--jm-ink);
+}
+
+#projects .button {
+	box-shadow: inset 0 0 0 1px var(--jm-blue);
+	color: var(--jm-deep) !important;
+}
+
+#testimonials {
+	background: var(--jm-pale);
+	color: var(--jm-text);
+}
+
+#testimonials h1,
+#testimonials h2,
+#testimonials h3,
+#testimonials h4,
+#testimonials h5,
+#testimonials h6,
+#testimonials strong,
+#testimonials b {
+	color: var(--jm-ink);
+}
+
+#testimonials header.major:after {
+	background: var(--jm-blue);
+}
+
+#testimonials .icon.alt:before {
+	background: #ffffff;
+	box-shadow: inset 0 0 0 1px var(--jm-line);
+	color: var(--jm-blue);
+}
+
+#testimonials .testimonial-card {
+	background: #ffffff;
+	border: solid 1px var(--jm-line);
+	box-shadow: 0 0.75em 2em rgba(24, 66, 103, 0.08);
+	color: var(--jm-text);
+}
+
+#contact.wrapper.style2 {
+	background: linear-gradient(135deg, var(--jm-deeper) 0%, var(--jm-deep) 55%, #0870ca 100%);
+	color: rgba(255, 255, 255, 0.86);
+}
+
+#contact h1,
+#contact h2,
+#contact h3,
+#contact h4,
+#contact h5,
+#contact h6,
+#contact strong,
+#contact b {
+	color: #ffffff;
+}
+
+#contact header.major:after {
+	background: rgba(255, 255, 255, 0.7);
+}
+
+#contact input[type="text"],
+#contact input[type="password"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact select,
+#contact textarea {
+	background: rgba(255, 255, 255, 0.09);
+	border-color: rgba(255, 255, 255, 0.38);
+	color: #ffffff;
+}
+
+#contact input[type="text"]::placeholder,
+#contact input[type="password"]::placeholder,
+#contact input[type="email"]::placeholder,
+#contact input[type="tel"]::placeholder,
+#contact textarea::placeholder {
+	color: rgba(255, 255, 255, 0.7);
+	opacity: 1;
+}
+
+#contact option {
+	color: var(--jm-ink);
+	background: #ffffff;
+}
+
+#contact input[type="checkbox"] + label {
+	color: rgba(255, 255, 255, 0.82);
+}
+
+#contact input[type="submit"].primary {
+	background: #ffffff;
+	color: var(--jm-deep) !important;
+}
+
+#footer {
+	background: #0d2235;
+	color: rgba(255, 255, 255, 0.55);
+}
+
+#footer a {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#footer a:hover {
+	color: #ffffff !important;
+}
+
+#titleBar .toggle {
+	background: var(--jm-blue);
+}
+
+#navPanel {
+	background: #10283d;
+}
+
+.spotlight .content {
+	border-width: 0.22em;
+}
+

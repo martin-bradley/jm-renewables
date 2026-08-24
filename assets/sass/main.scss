@@ -1544,7 +1544,7 @@
 	#banner {
 		background-attachment: fixed;
 		background-color: _palette(accent2);
-		background-image: url('../../images/banner.jpg');
+		background-image: url('../../images/banner.png');
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.25);
@@ -2163,3 +2163,87 @@
 			}
 
 	}
+
+/* J & M palette refinement
+   ------------------------------------------------------------ */
+#about .content {
+	background: rgba(246, 250, 253, 0.97);
+	color: #4f6376;
+
+	h1, h2, h3, h4, h5, h6, strong, b { color: #17324d; }
+	header p { color: #597086; }
+}
+
+#services .content {
+	background: rgba(5, 63, 121, 0.96);
+	color: rgba(255, 255, 255, 0.86);
+	border-color: #5ca4df;
+
+	h1, h2, h3, h4, h5, h6, strong, b { color: #ffffff; }
+}
+
+#projects .content {
+	background: rgba(231, 241, 248, 0.97);
+	color: #4f6376;
+	border-color: #096bc2;
+
+	h1, h2, h3, h4, h5, h6, strong, b { color: #17324d; }
+}
+
+.spotlight.style1 .content,
+.spotlight.style2 .content,
+.spotlight.style3 .content {
+	border-color: #096bc2;
+}
+
+#about:before,
+#services:before,
+#projects:before {
+	background:
+		linear-gradient(rgba(34, 82, 122, 0.22), rgba(34, 82, 122, 0.22)),
+		url("images/overlay.png");
+}
+
+#testimonials {
+	background: #eef5fa;
+	color: #4f6376;
+
+	h1, h2, h3, h4, h5, h6, strong, b { color: #17324d; }
+	header.major:after { background: #096bc2; }
+
+	.testimonial-card {
+		background: #ffffff;
+		border: solid 1px #c7d9e6;
+		box-shadow: 0 0.75em 2em rgba(24, 66, 103, 0.08);
+		color: #4f6376;
+	}
+}
+
+#contact.wrapper.style2 {
+	background: linear-gradient(135deg, #05396c 0%, #064f95 55%, #0870ca 100%);
+	color: rgba(255, 255, 255, 0.86);
+
+	h1, h2, h3, h4, h5, h6, strong, b { color: #ffffff; }
+	header.major:after { background: rgba(255, 255, 255, 0.7); }
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+	select,
+	textarea {
+		background: rgba(255, 255, 255, 0.09);
+		border-color: rgba(255, 255, 255, 0.38);
+		color: #ffffff;
+	}
+}
+
+#footer {
+	background: #0d2235;
+	color: rgba(255, 255, 255, 0.55);
+}
+
+#titleBar .toggle { background: #096bc2; }
+#navPanel { background: #10283d; }
+.spotlight .content { border-width: 0.22em; }
+
