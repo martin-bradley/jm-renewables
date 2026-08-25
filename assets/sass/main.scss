@@ -2247,3 +2247,961 @@
 #navPanel { background: #10283d; }
 .spotlight .content { border-width: 0.22em; }
 
+/* J & M business-card branding pass
+   Hero text is HTML; the brand sweep is CSS. */
+#banner {
+	background: linear-gradient(135deg, #9b92e2 0%, #9187dd 45%, #857bd3 100%);
+	overflow: hidden;
+
+	&:after {
+		background: linear-gradient(135deg, #354ac6 0%, #2a3db5 48%, #1f309d 100%);
+		border-radius: 50% 50% 0 0 / 72% 72% 0 0;
+		height: 88vh;
+		left: 23%;
+		opacity: 1;
+		top: 54%;
+		transform: rotate(-8deg);
+		width: 108%;
+		z-index: 0;
+	}
+
+	.content.hero-copy {
+		left: 50%;
+		max-width: 76em;
+		padding: 0 2em;
+		text-align: center;
+		top: 49%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		z-index: 2;
+	}
+}
+
+.hero-brand {
+	margin: 0 auto 1.15em;
+	text-align: center;
+
+	h1 {
+		color: #ffffff;
+		font-size: clamp(4.6rem, 7.6vw, 8rem);
+		font-weight: 500;
+		letter-spacing: 0.035em;
+		line-height: 0.92;
+		margin: 0 0 0.28em 0;
+	}
+}
+
+.hero-company {
+	color: #ffffff;
+	font-size: clamp(3rem, 6.2vw, 6.2rem);
+	font-weight: 100;
+	letter-spacing: 0.04em;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.hero-tagline {
+	color: #ffffff;
+	font-size: clamp(1rem, 1.45vw, 1.35rem);
+	font-weight: 300;
+	letter-spacing: 0.18em;
+	margin: 0 0 1.65em 0;
+	text-transform: uppercase;
+}
+
+#services .content {
+	background: rgba(42, 55, 157, 0.96);
+	border-color: #a79ee8;
+}
+
+#about .content {
+	background: rgba(248, 247, 252, 0.97);
+	color: #66708a;
+}
+
+#projects .content {
+	background: rgba(241, 240, 250, 0.97);
+	border-color: #3044bd;
+	color: #66708a;
+}
+
+#testimonials {
+	background: #f1f0fa;
+	color: #66708a;
+}
+
+#contact.wrapper.style2 {
+	background: linear-gradient(135deg, #172871 0%, #2234a3 48%, #3b4cc1 100%);
+	color: rgba(255, 255, 255, 0.9);
+
+	a {
+		border-bottom-color: rgba(255, 255, 255, 0.42);
+		color: #ffffff !important;
+		font-weight: 300;
+	}
+}
+
+#footer {
+	background: #141d49;
+	color: rgba(255, 255, 255, 0.58);
+}
+
+#titleBar .toggle { background: #3044bd; }
+#navPanel { background: #171f51; }
+
+@include breakpoint('<=medium') {
+	#banner {
+		.content.hero-copy { top: 49%; }
+
+		&:after {
+			height: 80vh;
+			left: 12%;
+			top: 58%;
+			width: 125%;
+		}
+	}
+}
+
+@include breakpoint('<=small') {
+	#banner {
+		background: linear-gradient(155deg, #9f96e5 0%, #8d83d9 100%);
+
+		&:after {
+			border-radius: 50% 50% 0 0 / 66% 66% 0 0;
+			height: 66vh;
+			left: -10%;
+			top: 62%;
+			transform: rotate(-7deg);
+			width: 150%;
+		}
+
+		.content.hero-copy {
+			padding: 0 1.35em;
+			top: 47%;
+		}
+	}
+
+	.hero-company {
+		font-size: clamp(1.85rem, 9.5vw, 2.7rem);
+		white-space: normal;
+	}
+
+	.hero-tagline {
+		font-size: 0.88rem;
+		letter-spacing: 0.12em;
+	}
+}
+
+/* J & M navigation and contrast tweaks
+   ------------------------------------------------------------ */
+#logo {
+	display: none;
+}
+
+#header,
+body.landing #header {
+	background: rgba(31, 40, 105, 0.92);
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+#header nav {
+	right: 1em;
+}
+
+#projects .content {
+	header p {
+		color: #6b7390;
+	}
+
+	p {
+		color: #68718d;
+	}
+}
+
+#testimonials {
+	header.major p {
+		color: #6b7390;
+	}
+
+	p {
+		color: #68718d;
+	}
+}
+
+#projects .content strong,
+#testimonials strong {
+	color: #26365b;
+}
+
+@include breakpoint('<=medium') {
+	#header {
+		display: none;
+	}
+}
+
+/* J & M hero sweep curve fix
+   ------------------------------------------------------------ */
+#banner {
+	&:after {
+		background: linear-gradient(135deg, #354ac6 0%, #2a3db5 48%, #1f309d 100%);
+		border-radius: 50%;
+		height: 145vh;
+		left: -48vw;
+		opacity: 1;
+		top: 56vh;
+		transform: rotate(-18deg);
+		transform-origin: 50% 50%;
+		width: 185vw;
+		z-index: 0;
+	}
+}
+
+@include breakpoint('<=medium') {
+	#banner:after {
+		height: 132vh;
+		left: -58vw;
+		top: 59vh;
+		transform: rotate(-17deg);
+		width: 205vw;
+	}
+}
+
+@include breakpoint('<=small') {
+	#banner:after {
+		height: 110vh;
+		left: -82vw;
+		top: 61vh;
+		transform: rotate(-15deg);
+		width: 255vw;
+	}
+}
+
+/* J & M mobile navigation cleanup
+   ------------------------------------------------------------ */
+@include breakpoint('<=small') {
+	#titleBar {
+		background: #171f51;
+
+		.title {
+			display: none;
+		}
+
+		.toggle {
+			background: transparent;
+			height: 44px;
+			width: 54px;
+
+			&:before {
+				background: #3044bd;
+				color: rgba(255, 255, 255, 0.9);
+				height: 44px;
+				line-height: 44px;
+				width: 54px;
+			}
+		}
+	}
+
+	#navPanel {
+		background: #171f51;
+
+		.link {
+			color: rgba(255, 255, 255, 0.88);
+		}
+	}
+}
+
+/* ===== J&M hero + nav repair ===== */
+
+/* Restore the softer fixed navigation treatment. */
+#header,
+body.landing #header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10000;
+	background: linear-gradient(
+		to bottom,
+		rgba(29, 38, 101, 0.92) 0%,
+		rgba(29, 38, 101, 0.82) 72%,
+		rgba(29, 38, 101, 0.58) 100%
+	);
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	box-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.08),
+		0 10px 28px rgba(20, 24, 72, 0.18);
+}
+
+#logo {
+	display: none;
+}
+
+/* Desktop hero: real HTML copy left, product visual right. */
+#banner {
+	overflow: hidden;
+}
+
+#banner .content.hero-layout {
+	position: relative;
+	left: auto;
+	top: auto;
+	transform: none;
+	display: grid;
+	grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+	align-items: center;
+	gap: 2.5rem;
+	width: min(1180px, calc(100% - 4rem));
+	max-width: 1180px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 7.5rem 0 4.5rem;
+	text-align: left;
+	z-index: 2;
+}
+
+#banner .hero-copy {
+	position: relative;
+	z-index: 3;
+	max-width: 40rem;
+	text-align: left;
+}
+
+#banner .hero-brand {
+	align-items: flex-start;
+	margin: 0 0 1.35rem;
+	text-align: left;
+}
+
+#banner .hero-brand h1 {
+	font-size: clamp(4.6rem, 6vw, 6.7rem);
+}
+
+#banner .hero-company {
+	font-size: clamp(3.2rem, 5vw, 5.2rem);
+}
+
+#banner .hero-tagline {
+	max-width: 34rem;
+	margin: 0 0 2rem;
+}
+
+#banner .actions.special {
+	justify-content: flex-start;
+}
+
+.hero-product {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 100%;
+	min-height: 32rem;
+}
+
+.hero-product img {
+	display: block;
+	width: min(100%, 35rem);
+	max-height: 72vh;
+	object-fit: contain;
+	filter: drop-shadow(0 1.5rem 2.5rem rgba(8, 10, 54, 0.3));
+}
+
+/* Keep the branded sweep behind both copy and product. */
+#banner:after {
+	z-index: 0;
+}
+
+/* Tablet */
+@media screen and (max-width: 980px) {
+	#banner .content.hero-layout {
+		grid-template-columns: 1fr;
+		width: min(760px, calc(100% - 3rem));
+		padding: 6.5rem 0 3.5rem;
+		gap: 1rem;
+		text-align: center;
+	}
+
+	#banner .hero-copy {
+		max-width: none;
+		text-align: center;
+	}
+
+	#banner .hero-brand {
+		align-items: center;
+		text-align: center;
+	}
+
+	#banner .hero-tagline {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#banner .actions.special {
+		justify-content: center;
+	}
+
+	.hero-product {
+		min-height: 18rem;
+		justify-content: center;
+	}
+
+	.hero-product img {
+		width: min(100%, 24rem);
+		max-height: 24rem;
+	}
+}
+
+/* Mobile: retain crisp HTML text and let the heat pump become a lower visual layer. */
+@media screen and (max-width: 736px) {
+	#banner .content.hero-layout {
+		position: relative;
+		display: block;
+		width: calc(100% - 2.5rem);
+		height: 100%;
+		padding: 6.5rem 0 3rem;
+	}
+
+	#banner .hero-copy {
+		position: relative;
+		z-index: 4;
+		text-align: center;
+	}
+
+	#banner .hero-brand {
+		align-items: center;
+		text-align: center;
+	}
+
+	#banner .hero-brand h1 {
+		font-size: 4rem;
+	}
+
+	#banner .hero-company {
+		font-size: 2.7rem;
+		letter-spacing: 0.08em;
+	}
+
+	#banner .hero-tagline {
+		font-size: 0.96rem;
+		line-height: 1.5;
+		letter-spacing: 0.13em;
+		max-width: 20rem;
+	}
+
+	#banner .actions.special {
+		justify-content: center;
+		margin-bottom: 14rem;
+	}
+
+	#banner .actions.special li {
+		width: 100%;
+	}
+
+	#banner .actions.special .button {
+		width: 100%;
+	}
+
+	.hero-product {
+		position: absolute;
+		right: -0.75rem;
+		bottom: 1.75rem;
+		width: 74%;
+		height: auto;
+		min-height: 0;
+		justify-content: flex-end;
+		pointer-events: none;
+		z-index: 3;
+	}
+
+	.hero-product img {
+		width: 100%;
+		max-height: 18rem;
+	}
+}
+
+/* ===== J&M hero vertical-gap fix =====
+   Landed uses #banner:before as a 100vh inline-block spacer to vertically
+   centre its original banner content. With our grid hero that spacer creates
+   an entire blank viewport before the real hero, so disable it. */
+#banner:before {
+	display: none !important;
+	content: none !important;
+}
+
+#banner {
+	display: flex;
+	align-items: stretch;
+	min-height: 100vh;
+}
+
+#banner .content.hero-layout {
+	height: auto;
+	min-height: 100vh;
+	box-sizing: border-box;
+	flex: 1 1 auto;
+}
+
+@media screen and (max-width: 736px) {
+	#banner .content.hero-layout {
+		height: auto;
+		min-height: 100vh;
+	}
+}
+
+/* ===== J&M mobile hero composition pass =====
+   Mobile gets its own composition rather than a shrunken desktop layout. */
+@media screen and (max-width: 736px) {
+	#banner {
+		min-height: calc(100svh - 44px);
+		height: calc(100svh - 44px);
+	}
+
+	#banner .content.hero-layout {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 100%;
+		min-height: calc(100svh - 44px);
+		height: calc(100svh - 44px);
+		padding: 4.25rem 1.35rem 1.25rem;
+		overflow: hidden;
+	}
+
+	#banner .hero-copy {
+		width: 100%;
+		z-index: 5;
+	}
+
+	#banner .hero-brand {
+		margin-bottom: 0.9rem;
+	}
+
+	#banner .hero-brand h1 {
+		font-size: clamp(3.25rem, 15vw, 4rem);
+		line-height: 0.95;
+	}
+
+	#banner .hero-company {
+		font-size: clamp(2.05rem, 10vw, 2.65rem);
+		line-height: 1;
+		letter-spacing: 0.07em;
+		white-space: nowrap;
+	}
+
+	#banner .hero-tagline {
+		max-width: 19rem;
+		margin: 0.9rem auto 1.4rem;
+		font-size: 0.82rem;
+		line-height: 1.45;
+		letter-spacing: 0.12em;
+	}
+
+	#banner .actions.special {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.65rem;
+		margin: 0;
+	}
+
+	#banner .actions.special li {
+		width: auto;
+		padding: 0;
+	}
+
+	#banner .actions.special .button {
+		width: 13.5rem;
+		min-width: 13.5rem;
+		height: 2.8rem;
+		line-height: 2.8rem;
+		padding: 0 1.1rem;
+	}
+
+	/* Move the sweep higher and off-centre so it reads as a rising brand curve,
+	   not a symmetrical bowl. */
+	#banner:after {
+		left: -58%;
+		right: auto;
+		bottom: -20%;
+		width: 190%;
+		height: 62%;
+		min-width: 0;
+		min-height: 0;
+		border-radius: 50% 50% 0 0 / 42% 42% 0 0;
+		transform: rotate(-8deg);
+		transform-origin: 50% 50%;
+	}
+
+	/* Make the heat pump a strong lower-right visual and let it overlap the sweep. */
+	.hero-product {
+		position: absolute;
+		right: -9%;
+		bottom: 0.75rem;
+		width: 84%;
+		height: auto;
+		min-height: 0;
+		justify-content: flex-end;
+		pointer-events: none;
+		z-index: 4;
+	}
+
+	.hero-product img {
+		width: 100%;
+		max-height: 19.5rem;
+		object-fit: contain;
+		filter: drop-shadow(0 1rem 1.8rem rgba(8, 10, 54, 0.34));
+	}
+
+	#banner .goto-next {
+		bottom: 0.6rem;
+		z-index: 6;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#banner .content.hero-layout {
+		padding-top: 3.8rem;
+	}
+
+	#banner .hero-brand h1 {
+		font-size: 3.35rem;
+	}
+
+	#banner .hero-company {
+		font-size: 2.15rem;
+	}
+
+	#banner .hero-tagline {
+		font-size: 0.78rem;
+		max-width: 18rem;
+		margin-bottom: 1.15rem;
+	}
+
+	#banner .actions.special .button {
+		width: 12.75rem;
+		min-width: 12.75rem;
+	}
+
+	#banner:after {
+		left: -67%;
+		bottom: -19%;
+		width: 205%;
+		height: 60%;
+	}
+
+	.hero-product {
+		right: -13%;
+		bottom: 0.5rem;
+		width: 88%;
+	}
+
+	.hero-product img {
+		max-height: 18rem;
+	}
+}
+
+/* ===== J&M compact-tablet hero refinement =====
+   Keep the 13-inch iPad treatment, but give smaller landscape tablets
+   more left/right breathing room and slightly reduce the copy scale. */
+@media screen and (min-width: 737px) and (max-width: 1200px) {
+	#banner .content.hero-layout {
+		width: calc(100% - 9rem);
+		max-width: none;
+		grid-template-columns: minmax(0, 0.92fr) minmax(300px, 1.08fr);
+		gap: 2.5rem;
+	}
+
+	#banner .hero-copy {
+		padding-left: 0.75rem;
+	}
+
+	#banner .hero-brand h1 {
+		font-size: clamp(3.8rem, 5.4vw, 5rem);
+	}
+
+	#banner .hero-company {
+		font-size: clamp(2.55rem, 4.5vw, 3.65rem);
+		letter-spacing: 0.08em;
+	}
+
+	#banner .hero-tagline {
+		max-width: 30rem;
+		font-size: 0.96rem;
+		letter-spacing: 0.13em;
+	}
+
+	#banner .actions.special {
+		gap: 0.75rem;
+	}
+
+	#banner .actions.special .button {
+		min-width: 9.6rem;
+	}
+}
+
+/* Slightly tighter still for 11-inch / mini-style landscape widths. */
+@media screen and (min-width: 737px) and (max-width: 1050px) {
+	#banner .content.hero-layout {
+		width: calc(100% - 8rem);
+		grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+		gap: 2rem;
+	}
+
+	#banner .hero-brand h1 {
+		font-size: clamp(3.5rem, 5.1vw, 4.5rem);
+	}
+
+	#banner .hero-company {
+		font-size: clamp(2.35rem, 4.2vw, 3.3rem);
+	}
+
+	#banner .hero-tagline {
+		font-size: 0.9rem;
+		max-width: 27rem;
+	}
+
+	.hero-product img {
+		width: min(100%, 29rem);
+	}
+}
+
+/* ===== J&M tablet centring + mobile restore =====
+   Centre the copy within the left-hand tablet column, and restore
+   the centred mobile heat-pump positioning from the previous pass. */
+
+/* Compact landscape tablets: centre the entire copy block between
+   the viewport edge and the product image rather than hugging the left edge. */
+@media screen and (min-width: 737px) and (max-width: 1200px) {
+	#banner .content.hero-layout {
+		width: calc(100% - 6rem);
+		grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.05fr);
+		gap: 2.75rem;
+	}
+
+	#banner .hero-copy {
+		justify-self: center;
+		width: 100%;
+		max-width: 30rem;
+		padding-left: 0;
+		text-align: center;
+	}
+
+	#banner .hero-brand {
+		align-items: center;
+		text-align: center;
+	}
+
+	#banner .hero-tagline {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	#banner .actions.special {
+		justify-content: center;
+	}
+}
+
+/* Smaller iPad / mini landscape widths need a slightly narrower copy block
+   so it remains visually centred in the available left-hand space. */
+@media screen and (min-width: 737px) and (max-width: 1050px) {
+	#banner .content.hero-layout {
+		width: calc(100% - 5rem);
+		grid-template-columns: minmax(0, 0.92fr) minmax(280px, 1.08fr);
+		gap: 2.25rem;
+	}
+
+	#banner .hero-copy {
+		max-width: 26rem;
+	}
+
+	#banner .hero-brand h1 {
+		font-size: clamp(3.35rem, 5vw, 4.35rem);
+	}
+
+	#banner .hero-company {
+		font-size: clamp(2.25rem, 4vw, 3.15rem);
+	}
+
+	#banner .hero-tagline {
+		max-width: 24rem;
+		font-size: 0.88rem;
+	}
+}
+
+/* Restore the mobile image centring that was lost in the last tablet-only pass. */
+@media screen and (max-width: 736px) {
+	.hero-product {
+		left: 50%;
+		right: auto;
+		width: 76%;
+		transform: translateX(-50%);
+		justify-content: center;
+	}
+
+	.hero-product img {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.hero-product {
+		left: 50%;
+		right: auto;
+		width: 78%;
+		transform: translateX(-50%);
+	}
+}
+
+/* ===== J&M cross-device consistency pass =====
+   Keep the approved tablet composition, while making phone hero proportions
+   consistent across short and tall devices. */
+
+/* Tablet: keep the copy and product vertically aligned in the same visual band. */
+@media screen and (min-width: 737px) and (max-width: 1200px) {
+	#banner .hero-copy,
+	#banner .hero-product {
+		align-self: center;
+	}
+
+	#banner .hero-copy {
+		transform: translateY(-0.5rem);
+	}
+
+	#banner .hero-product {
+		transform: translateY(0.5rem);
+	}
+}
+
+/* Phones: scale and position the product using viewport height instead of
+   fixed pixel sizes so SE / Pro / Pro Max retain the same visual balance. */
+@media screen and (max-width: 736px) {
+	#banner .content.hero-layout {
+		padding-top: clamp(3.5rem, 7vh, 4.5rem);
+	}
+
+	#banner .hero-tagline {
+		margin-bottom: clamp(1rem, 2vh, 1.35rem);
+	}
+
+	#banner .actions.special {
+		gap: clamp(0.55rem, 1.2vh, 0.75rem);
+	}
+
+	/* Keep the branded sweep beginning around the same visual point
+	   regardless of phone height. */
+	#banner:after {
+		left: -58%;
+		bottom: -10%;
+		width: 190%;
+		height: 48%;
+		min-width: 0;
+		min-height: 0;
+		border-radius: 50% 50% 0 0 / 42% 42% 0 0;
+		transform: rotate(-8deg);
+	}
+
+	.hero-product {
+		left: 50%;
+		right: auto;
+		bottom: clamp(1rem, 3.5vh, 2.4rem);
+		width: clamp(15rem, 73vw, 20rem);
+		transform: translateX(-50%);
+		justify-content: center;
+	}
+
+	.hero-product img {
+		width: 100%;
+		max-height: clamp(12rem, 29vh, 18rem);
+		margin: 0 auto;
+	}
+
+	#banner .goto-next {
+		bottom: 0.45rem;
+	}
+}
+
+/* Very short phones: avoid the product crowding the CTA area. */
+@media screen and (max-width: 736px) and (max-height: 720px) {
+	#banner .content.hero-layout {
+		padding-top: 3.1rem;
+	}
+
+	#banner .hero-brand h1 {
+		font-size: 3.2rem;
+	}
+
+	#banner .hero-company {
+		font-size: 2.05rem;
+	}
+
+	#banner .hero-tagline {
+		font-size: 0.75rem;
+		margin-bottom: 0.85rem;
+	}
+
+	.hero-product {
+		bottom: 0.85rem;
+		width: 67vw;
+	}
+
+	.hero-product img {
+		max-height: 11.8rem;
+	}
+}
+
+/* Tall phones: use the extra height to enlarge and raise the product
+   rather than creating a large empty band between CTA and curve. */
+@media screen and (max-width: 736px) and (min-height: 850px) {
+	#banner:after {
+		bottom: -8%;
+		height: 46%;
+	}
+
+	.hero-product {
+		bottom: clamp(2rem, 4.5vh, 3rem);
+		width: clamp(17rem, 70vw, 20rem);
+	}
+
+	.hero-product img {
+		max-height: clamp(15rem, 30vh, 18rem);
+	}
+}
+
+/* ===== J&M tablet text-centre consistency =====
+   Apply the same centred copy treatment across the full tablet range,
+   including 13-inch iPad, while preserving the two-column composition. */
+@media screen and (min-width: 737px) and (max-width: 1200px) {
+	#banner .hero-copy {
+		justify-self: center;
+		width: 100%;
+		max-width: 30rem;
+		padding-left: 0;
+		text-align: center;
+	}
+
+	#banner .hero-brand {
+		align-items: center;
+		text-align: center;
+	}
+
+	#banner .hero-tagline {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	#banner .actions.special {
+		justify-content: center;
+	}
+}
+
